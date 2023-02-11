@@ -2,7 +2,7 @@ import img from "../../assets/bg_card.jpg";
 
 export function Card({ max_tickets, name, place }) {
   return (
-    <div className="max-w-sm bg-white border-violet-200 border rounded-3xl shadow p-5 mr-10 flex-wrap min-w-[270px]">
+    <div className="bg-white border-violet-200 border rounded-3xl shadow p-5">
       <img className="rounded-xl" src={img} alt="test" />
 
       <div className="p-5">
