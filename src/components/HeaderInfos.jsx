@@ -5,7 +5,7 @@ export default function HeaderInfos({titleMessage, subTitleMessage, promoMessage
             <div className="text-center text-light font-montserrat font-light my-7">{subTitleMessage}</div>
             <div className="flex justify-center items-center">
                 <a href="#">
-                    <div className="flex justify-center items-center bg-primary p-4 border rounded-full">
+                    <div className="flex justify-center items-center bg-primary p-4 border rounded-full hover:scale-[1.07] transition">
                         <div className="text-white mx-4">{promoMessage}</div>
                         <div className="text-white mx-4">
                             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">

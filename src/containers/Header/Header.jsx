@@ -1,6 +1,6 @@
-import PromotionCode from "./PromotionCode";
-import NavigationBar from "./NavigationBar";
-import HeaderInfos from "./HeaderInfos";
+import PromotionCode from "../../components/PromotionCode";
+import NavigationBar from "../../components/NavigationBar";
+import HeaderInfos from "../../components/HeaderInfos";
 
 export default function Header({titleMessage, subTitleMessage, promoMessage}) {
     return(

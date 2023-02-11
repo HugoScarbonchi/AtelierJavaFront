@@ -3,12 +3,12 @@ export default function NavigationBar() {
         <div className="flex flex-row h-20">
             <div className="w-3/12 flex justify-center items-center text-primary text-2xl font-bold"><span>JavaTelier</span></div>
             <div className="w-6/12 flex flex-grow justify-center items-center">
-                <a href="#" className="mx-8 text-primary">Home</a>
-                <a href="#" className="mx-8 text-primary">Events</a>
-                <a href="#" className="mx-8 text-primary">Products</a>
+                <a href="#" className="mx-4 md:mx-6 lg:mx-8 text-primary">Home</a>
+                <a href="#" className="mx-4 md:mx-6 lg:mx-8 text-primary">Events</a>
+                <a href="#" className="mx-4 md:mx-6 lg:mx-8 text-primary">Products</a>
             </div>
             <div className="w-3/12 flex justify-center items-center text-primary">
-                <a href="#" className="mx-1">
+                <a href="#" className="mx-1 ">
                     <svg width="30" height="30" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="25" cy="25" r="24.3857" fill="white" stroke="#D4D2E3" stroke-width="1.22858"/>
                         <path d="M16.25 35V33.75C16.25 32.6009 16.4763 31.4631 16.9161 30.4015C17.3558 29.3399 18.0003 28.3753 18.8128 27.5628C19.6253 26.7503 20.5899 26.1058 21.6515 25.6661C22.7131 25.2263 23.8509 25 25 25C26.1491 25 27.2869 25.2263 28.3485 25.6661C29.4101 26.1058 30.3747 26.7503 31.1872 27.5628C31.9997 28.3753 32.6442 29.3399 33.0839 30.4015C33.5237 31.4631 33.75 32.6009 33.75 33.75V35" stroke="#8D8BA7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
