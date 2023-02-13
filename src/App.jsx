@@ -1,5 +1,9 @@
-export function App(){
-  return <div>
-    <h1>Java Front</h1>
-  </div>
+import { Outlet } from "react-router-dom";
+
+export function App() {
+
+    return <div>
+        <Outlet />
+    </div>
+
 }
