@@ -1,4 +1,5 @@
 import img from "../../assets/bg_card.jpg";
+import s from "./style.module.css"
 
 export function Card({ max_tickets, name, place }) {
   return (
