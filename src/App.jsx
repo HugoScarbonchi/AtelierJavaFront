@@ -1,3 +1,4 @@
+
 import { Outlet } from "react-router-dom";
 
 export function App() {
@@ -7,4 +8,3 @@ export function App() {
     </div>
   );
 }
-
