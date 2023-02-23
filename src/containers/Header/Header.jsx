@@ -1,13 +1,21 @@
-import PromotionCode from "../../components/PromotionCode";
-import NavigationBar from "../../components/NavigationBar";
-import HeaderInfos from "../../components/HeaderInfos";
+import HeaderInfos from "../../components/HeaderInfos/HeaderInfos";
+import NavigationBar from "../../components/NavigationBar/NavigationBar";
+import PromotionCode from "../../components/PromotionCode/PromotionCode";
 
-export default function Header({titleMessage, subTitleMessage, promoMessage}) {
-    return(
-        <>
-            <PromotionCode />
-            <NavigationBar />
-            <HeaderInfos titleMessage={titleMessage} subTitleMessage={subTitleMessage} promoMessage={promoMessage}  />
-        </>
-    )
- }
+export function Header({
+  titleMessage,
+  subTitleMessage,
+  promoMessage,
+}) {
+  return (
+    <>
+      <PromotionCode />
+      <NavigationBar />
+      <HeaderInfos
+        titleMessage={titleMessage}
+        subTitleMessage={subTitleMessage}
+        promoMessage={promoMessage}
+      />
+    </>
+  );
+}
