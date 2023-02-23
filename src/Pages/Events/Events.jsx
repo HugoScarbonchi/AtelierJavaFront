@@ -2,7 +2,7 @@ import { Buttton } from "../../components/Button/Button";
 import { Section } from "../../components/Section/Section";
 import { CardContainer } from "../../containers/CardContainer/CardContainer";
 
-export function Events({}) {
+export function Events(props) {
   return (
     <>
       <Section className="flex-col items-start gap-1 mb-7">
