@@ -8,3 +8,7 @@
 body {
     font-family: 'DM Sans', Arial, sans-serif;
 }
+
+h1 {
+    @apply text-6xl text-primary font-bold text-center my-7 max-w-xl;
+}
