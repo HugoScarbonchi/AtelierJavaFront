@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-
 import { App } from "./App";
 import { PageNotFound } from "./Pages/PageNotFound/PageNotFound";
 import { Home } from "./Pages/Home/Home";
