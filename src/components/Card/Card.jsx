@@ -1,5 +1,5 @@
 import img from "../../assets/bg_card.jpg";
-import s from "./style.module.css"
+import s from "./style.module.css";
 
 export function Card({ max_tickets, name, place }) {
   return (
@@ -22,10 +22,39 @@ export function Card({ max_tickets, name, place }) {
           </a>
           <div className="flex flex-col w-14">
             <label className="text-indigo-800">Quantité</label>
-            <input min={0} max={max_tickets} type="number" className="border rounded-md" />
+            <input
+              min={0}
+              max={max_tickets}
+              type="number"
+              className="border rounded-md"
+            />
           </div>
         </div>
       </div>
     </div>
   );
 }
+
+// import { useEffect, useState } from "react";
+// import { FeteDeLaMusique } from "./api/feteDeLaMusique";
+// import { CardContainer } from "./containers/CardContainer/CardContainer";
+
+// export function App() {
+//   const [eventList, setEventList] = useState();
+
+//   async function fetchEvents() {
+//     const resultFetch = await FeteDeLaMusique.fetchAllEvents();
+//     setEventList(resultFetch);
+//   }
+
+//   useEffect(() => {
+//     fetchEvents();
+//   }, []);
+
+//   return (
+//     <div>
+//       <h1 className="mb-20">Java Front</h1>
+//       {eventList && <CardContainer eventList={eventList} />}
+//     </div>
+//   );
+// }
