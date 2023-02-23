@@ -17,6 +17,10 @@ module.exports = {
             ...theme('colors'),
             'primary': '#5D5A88'
         }),
+        borderColor: theme => ({
+            ...theme('colors'),
+            'primary': '#5D5A88'
+        }),
         extend: {},
     },
     plugins: [],

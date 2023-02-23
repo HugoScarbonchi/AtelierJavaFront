@@ -12,3 +12,10 @@ body {
 h1 {
     @apply text-6xl text-primary font-bold text-center my-7 max-w-xl;
 }
+h3 {
+    @apply text-3xl text-primary font-bold text-center my-7;
+}
+
+/* .container {
+    @apply flex flex-col max-w-
+} */

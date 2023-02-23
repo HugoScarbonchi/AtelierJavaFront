@@ -2,11 +2,14 @@ import { useEffect, useState } from "react";
 import { FeteDeLaMusique } from "../../api/feteDeLaMusique";
 import { Card } from "../../components/Card/Card";
 
-export function CardContainer() {
+export function CardContainer({max=false}) {
   const [eventList, setEventList] = useState();
 
   async function fetchEvents() {
-    const resultFetch = await FeteDeLaMusique.fetchAllEvents();
+    let resultFetch = await FeteDeLaMusique.fetchAllEvents();
+    if(max) {
+        resultFetch = resultFetch.slice(0, max);
+    }
     setEventList(resultFetch);
   }
 
@@ -23,6 +26,7 @@ export function CardContainer() {
             max_tickets={event.max_tickets}
             name={event.name}
             place={event.place}
+            price={event.price}
           />
         ))}
     </div>
