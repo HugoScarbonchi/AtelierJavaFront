@@ -1,6 +1,6 @@
 import { Buttton } from "../../components/Button/Button";
 import { Section } from "../../components/Section/Section";
-import { CardContainer } from "../../containers/CardContainer/CardContainer";
+import { CardEventsContainer } from "../../containers/CardEventsContainer/CardEventsContainer";
 
 export function Events(props) {
   return (
@@ -10,7 +10,7 @@ export function Events(props) {
         <Buttton icon="add">Ajouter un événement</Buttton>
       </Section>
 
-      <CardContainer />
+      <CardEventsContainer />
     </>
   );
 }

@@ -1,7 +1,7 @@
 import { Section } from "../../components/Section/Section";
 import { TitleSection } from "../../components/TitleSection/TitleSection";
 import { Buttton } from "../../components/Button/Button";
-import { CardContainer } from "../../containers/CardContainer/CardContainer";
+import { CardEventsContainer } from "../../containers/CardEventsContainer/CardEventsContainer";
 import { useNavigate } from "react-router-dom";
 
 export function Home() {
@@ -15,7 +15,7 @@ export function Home() {
       />
 
       <Section className="mb-5">
-        <CardContainer max={3} />
+        <CardEventsContainer max={3} />
       </Section>
 
       <Section>
@@ -30,7 +30,7 @@ export function Home() {
       />
 
       <Section className="mb-5">
-        <CardContainer max={3} />
+        <CardEventsContainer max={3} />
       </Section>
 
       <Section>

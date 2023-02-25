@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { FeteDeLaMusique } from "../../api/feteDeLaMusique";
-import { Card } from "../../components/Card/Card";
+import { CardEvent } from "../../components/CardEvent/CardEvent";
 
-export function CardContainer({max=false}) {
+export function CardEventsContainer({ max = false }) {
   const [eventList, setEventList] = useState();
 
   async function fetchEvents() {
     let resultFetch = await FeteDeLaMusique.fetchAllEvents();
-    if(max) {
-        resultFetch = resultFetch.slice(0, max);
+    if (max) {
+      resultFetch = resultFetch.slice(0, max);
     }
     setEventList(resultFetch);
   }
@@ -21,7 +21,7 @@ export function CardContainer({max=false}) {
     <div className=" grid sm:grid-col-1 md:grid-cols-2 lg:grid-cols-3 gap-5 container mx-auto">
       {eventList &&
         eventList.map((event, i) => (
-          <Card
+          <CardEvent
             key={event.name + i}
             max_tickets={event.max_tickets}
             name={event.name}
