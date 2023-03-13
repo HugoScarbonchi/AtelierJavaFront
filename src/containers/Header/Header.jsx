@@ -6,16 +6,20 @@ export function Header({
   titleMessage,
   subTitleMessage,
   promoMessage,
+  showHeader,
 }) {
   return (
     <>
       <PromotionCode />
       <NavigationBar />
-      <HeaderInfos
-        titleMessage={titleMessage}
-        subTitleMessage={subTitleMessage}
-        promoMessage={promoMessage}
-      />
+        {showHeader &&
+            <HeaderInfos
+                titleMessage={titleMessage}
+                subTitleMessage={subTitleMessage}
+                promoMessage={promoMessage}
+            />
+        }
+
     </>
   );
 }

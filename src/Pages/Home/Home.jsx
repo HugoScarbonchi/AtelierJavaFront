@@ -3,11 +3,18 @@ import { TitleSection } from "../../components/TitleSection/TitleSection";
 import { Buttton } from "../../components/Button/Button";
 import { CardEventsContainer } from "../../containers/CardEventsContainer/CardEventsContainer";
 import { useNavigate } from "react-router-dom";
+import { Header } from "../../containers/Header/Header";
 
 export function Home() {
   const navigate = useNavigate();
   return (
     <>
+    <Header
+        titleMessage="Redécouvrez la fête de la musique"
+        subTitleMessage="Profitez ensemble de cet événement inoubliable"
+        promoMessage="Voir les prochains événements"
+        showHeader={true}
+      />
       <TitleSection
         title="Titre"
         subtitle="Sous titre"
