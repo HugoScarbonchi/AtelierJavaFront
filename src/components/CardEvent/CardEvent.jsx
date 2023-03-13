@@ -12,7 +12,7 @@ export function CardEvent({ max_tickets, name, place, price }) {
 
       <div className="flex flex-col gap-4 pt-5">
         <div>
-          <h5 className="inline-block relative text-2xl font-bold tracking-tight text-primary dark:text-white after:w-0 after:h-full after:absolute after:left-0 after:top-0 after:bg-primary after:z-[9] after:box-content after:transition-all group-hover:after:w-full group-hover:text-white">
+          <h5 className="inline-block relative text-2xl font-bold tracking-tight text-primary after:w-0 after:h-full after:absolute after:left-0 after:top-0 after:bg-primary after:z-[9] after:box-content after:transition-all group-hover:after:w-full group-hover:text-white">
             <span className="z-10 relative">{name}</span>
           </h5>
         </div>
