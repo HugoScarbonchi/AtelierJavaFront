@@ -7,9 +7,9 @@ export function Events(props) {
   return (
     <>
     <Header
-        titleMessage="Redécouvrez la fête de la musique"
-        subTitleMessage="Profitez ensemble de cet événement inoubliable"
-        promoMessage="Voir les prochains événements"
+        titleMessage="Retrouvez tous les évènements"
+        subTitleMessage="Réservez vite votre billet avant qu'il ne soit trop tard"
+        promoMessage="Pour 5 billets achetés, le 6ème offert"
         showHeader={true}
       />
       <Section className="flex-col items-start gap-1 mb-7">

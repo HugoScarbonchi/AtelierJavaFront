@@ -2,7 +2,7 @@ export default function NavigationBar() {
   return (
     <div className="flex flex-row h-20">
       <div className="w-3/12 flex justify-center items-center text-primary text-2xl font-bold">
-        <span>JavaTelier</span>
+        <a href="/">JavaTelier</a>
       </div>
       <div className="w-6/12 flex flex-grow justify-center items-center">
         <a
@@ -25,7 +25,7 @@ export default function NavigationBar() {
         </a>
       </div>
       <div className="w-3/12 flex justify-center items-center text-primary">
-        <a href="#" className="mx-1 ">
+        <a href="/account" className="mx-1 ">
           <svg
             width="40"
             height="40"
@@ -57,7 +57,7 @@ export default function NavigationBar() {
             />
           </svg>
         </a>
-        <a href="#" className="mx-1">
+        <a href="/cart" className="mx-1">
           <svg
             width="40"
             height="40"

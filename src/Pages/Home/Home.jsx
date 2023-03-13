@@ -10,15 +10,14 @@ export function Home() {
   return (
     <>
     <Header
-        titleMessage="Redécouvrez la fête de la musique"
-        subTitleMessage="Profitez ensemble de cet événement inoubliable"
-        promoMessage="Voir les prochains événements"
+        titleMessage="Venez découvrir la fête de la musique"
+        subTitleMessage="Achetez vos billets pour les évènements de la semaine et rapportez un souvenir de votre groupe préféré"
+        promoMessage="Voir les prochains évènements"
         showHeader={true}
       />
       <TitleSection
-        title="Titre"
-        subtitle="Sous titre"
-        append={<Buttton>test</Buttton>}
+        title="Évènements à venir"
+        subtitle="Accéder facilement aux évènements qui se déroulent dans les prochains jours"
       />
 
       <Section className="mb-5">
@@ -26,13 +25,13 @@ export function Home() {
       </Section>
 
       <Section>
-        <Buttton size="lg" icon="right">
-          Voir tous les produits
+        <Buttton onClick={() => navigate("/events")} size="lg" icon="right">
+          Voir tous les évènements
         </Buttton>
       </Section>
 
       <TitleSection
-        title="Nos produits"
+        title="Nos produits phares"
         subtitle="Achetez les produits de vos artistes préférés pour garder un souvenir de cette fête de la musique"
       />
 
