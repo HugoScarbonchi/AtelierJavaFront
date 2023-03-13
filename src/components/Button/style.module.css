@@ -1,7 +1,0 @@
-.btn {
-    @apply flex justify-center items-center bg-primary p-2 px-5 rounded-full hover:scale-[1.07] transition;
-}
-
-.lg {
-    @apply p-4 px-7
-}
