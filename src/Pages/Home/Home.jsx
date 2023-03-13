@@ -4,6 +4,7 @@ import { Buttton } from "../../components/Button/Button";
 import { CardEventsContainer } from "../../containers/CardEventsContainer/CardEventsContainer";
 import { useNavigate } from "react-router-dom";
 import { Header } from "../../containers/Header/Header";
+import {CardProductsContainer} from "../../containers/CardProductsContainer/CardProductsContainer";
 
 export function Home() {
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ export function Home() {
       />
 
       <Section className="mb-5">
-        <CardEventsContainer max={3} />
+        <CardProductsContainer max={3} />
       </Section>
 
       <Section>
