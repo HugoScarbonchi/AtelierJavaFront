@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react";
 import { FeteDeLaMusique } from "../../api/feteDeLaMusique";
+<<<<<<< Updated upstream:src/containers/CardEventsContainer/CardEventsContainer.jsx
 import { CardEvent } from "../../components/CardEvent/CardEvent";
+=======
+import { Card } from "../../components/Card/Card";
+import { Buttton } from "../../components/Button/Button";
+>>>>>>> Stashed changes:src/containers/CardContainer/CardContainer.jsx
 
 export function CardEventsContainer({ max = false }) {
   const [eventList, setEventList] = useState();
@@ -29,6 +34,7 @@ export function CardEventsContainer({ max = false }) {
             price={event.price}
           />
         ))}
+      
     </div>
   );
 }
