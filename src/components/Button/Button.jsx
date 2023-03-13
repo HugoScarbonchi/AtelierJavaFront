@@ -1,8 +1,8 @@
 import s from "./style.module.css";
 
-export function Buttton({size='', icon=false, children}) {
+export function Buttton({size='', icon=false, children, onClick}) {
 
-    return <a href="#" className={`${s.btn} ${s[size]}`}>
+    return <button onClick={onClick} href="#" className={`${s.btn} ${s[size]}`}>
         <div className="text-white">{children}</div>
         {icon == 'down' && <div className="text-white mx-4">
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -17,6 +17,6 @@ export function Buttton({size='', icon=false, children}) {
             </svg>
         </div>}
         {icon == 'add' && <div className="text-white mx-4 text-3xl leading-[0]">+</div>}
-    </a>
+    </button>
 
 }

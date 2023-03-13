@@ -14,6 +14,11 @@ export class FeteDeLaMusique {
     return response.data;
   }
 
+  static async fetchAllProducts() {
+    const response = await axios.get(`${BASE_URL}/products`);
+    return response.data
+  }
+
   static async createEvent(formValues) {
     return (await axios.post(`${BASE_URL}/`, formValues)).data;
   }
