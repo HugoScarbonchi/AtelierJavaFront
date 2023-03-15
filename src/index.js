@@ -37,7 +37,7 @@ root.render(
                     <Route path="/" element={<Home />}></Route>
                     <Route path="/events" element={<Events />}></Route>
                     <Route path="/products" element={<Products />}></Route>
-                    <Route path="/mycart" element={<CartPage />}></Route>
+                    <Route path="/cart" element={<CartPage />}></Route>
                     <Route path="/account" element={<UserAccount />}></Route>
                     <Route path="*" element={<PageNotFound />}></Route>
                 </Route>
