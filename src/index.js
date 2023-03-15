@@ -4,11 +4,11 @@ import "./index.css";
 import { App } from "./App";
 import { PageNotFound } from "./Pages/PageNotFound/PageNotFound";
 import { Home } from "./Pages/Home/Home";
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Events } from "./Pages/Events/Events";
 import { Products } from "./Pages/Products/Products";
 import CartPage from "./Pages/Cart/CartPage";
+import { UserAccount } from "./components/UserAccount/UserAccount";
 import { AdminProductsList } from "./Pages/Admin/AdminProductsList/AdminProductsList";
 import { AppAdmin } from "./AppAdmin";
 import { AdminProductUpdate } from "./Pages/Admin/AdminProductUpdate/AdminProductUpdate";
@@ -32,6 +32,7 @@ root.render(
                     <Route path="/events" element={<Events />}></Route>
                     <Route path="/products" element={<Products />}></Route>
                     <Route path="/mycart" element={<CartPage />}></Route>
+                    <Route path="/account" element={<UserAccount />}></Route>
                     <Route path="*" element={<PageNotFound />}></Route>
                 </Route>
             </Routes>
