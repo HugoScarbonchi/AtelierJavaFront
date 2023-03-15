@@ -13,6 +13,9 @@ import { AdminProductsList } from "./Pages/Admin/AdminProductsList/AdminProducts
 import { AppAdmin } from "./AppAdmin";
 import { AdminProductUpdate } from "./Pages/Admin/AdminProductUpdate/AdminProductUpdate";
 import { AdminProductAdd } from "./Pages/Admin/AdminProductAdd/AdminProductAdd";
+import { AdminEventsList } from "./Pages/Admin/AdminEventsList/AdminEventsList";
+import { AdminEventUpdate } from "./Pages/Admin/AdminEventUpdate/AdminEventUpdate";
+import { AdminEventAdd } from "./Pages/Admin/AdminEventAdd/AdminEventAdd";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -25,6 +28,9 @@ root.render(
                     <Route path="products" element={<AdminProductsList />}></Route>
                     <Route path="product/update/:id" element={<AdminProductUpdate />}></Route>
                     <Route path="product/add" element={<AdminProductAdd />}></Route>
+                    <Route path="events" element={<AdminEventsList />}></Route>
+                    <Route path="event/update/:id" element={<AdminEventUpdate />}></Route>
+                    <Route path="event/add" element={<AdminEventAdd />}></Route>
                     <Route path="*" element={<PageNotFound />}></Route>
                 </Route>
                 <Route path="/" element={<App />}>
