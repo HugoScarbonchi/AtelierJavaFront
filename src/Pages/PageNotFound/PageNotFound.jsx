@@ -3,9 +3,10 @@ export function PageNotFound() {
   return(
     <>
       <Header
-          titleMessage="Redécouvrez la fête de la musique"
-          subTitleMessage="Profitez ensemble de cet événement inoubliable"
-          promoMessage="Voir les prochains événements"
+          titleMessage="Malheuresement, cette page est introuvable"
+          subTitleMessage="Veuillez vous rediriger vers l'accueil"
+          promoMessage="Retourner à la page d'accueil"
+          buttonRoute="/"
           showHeader={true}
         />
       <div>404</div>

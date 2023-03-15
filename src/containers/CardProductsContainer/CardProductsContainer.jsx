@@ -25,7 +25,10 @@ export function CardProductsContainer({ max = false }) {
           <CardProduct
               key={product.name + i}
               name={product.name}
-              price={product.price}/>
+              price={product.price}
+              product={product}
+
+          />
         ))}
     </div>
   );

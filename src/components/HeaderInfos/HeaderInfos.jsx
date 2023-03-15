@@ -1,10 +1,13 @@
 import { Buttton } from "../Button/Button";
+import {useNavigate} from "react-router-dom";
 
 export default function HeaderInfos({
   titleMessage,
   subTitleMessage,
   promoMessage,
+    buttonRoute
 }) {
+    const navigate = useNavigate()
   return (
     <div className="flex flex-col justify-center items-center mt-6 mb-6">
       <h1>{titleMessage}</h1>
@@ -12,7 +15,7 @@ export default function HeaderInfos({
         {subTitleMessage}
       </div>
       <div className="flex justify-center items-center">
-        <Buttton size="lg" icon="down">
+        <Buttton onClick={() => navigate(buttonRoute)} size="lg" icon="down">
           {promoMessage}
         </Buttton>
       </div>

@@ -2,7 +2,9 @@ import img from "../../assets/bg_product.jpg";
 import { Buttton } from "../Button/Button";
 import {useState} from "react";
 
-export function CardProduct({ max_tickets, name, place, price }) {
+import { FeteDeLaMusique } from "../../api/feteDeLaMusique";
+
+export function CardProduct({ product, max_tickets, name, place, price }) {
 
   const [quantityValue, setQuantityValue] = useState(1);
 
@@ -30,7 +32,7 @@ export function CardProduct({ max_tickets, name, place, price }) {
         </span>
 
         <div className="flex justify-between items-start flex-wrap-reverse gap-3">
-          <Buttton>Du text</Buttton>
+          <Buttton onClick={() => FeteDeLaMusique.addProductToCart(product, 1, quantityValue)}>Du text</Buttton>
           <div className="flex flex-col gap-1 items-center">
             <label className="text-primary">Quantité</label>
             <div className="flex">
