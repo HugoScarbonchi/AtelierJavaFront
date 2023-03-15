@@ -26,6 +26,11 @@ export class FeteDeLaMusique {
     return response.data;
   }
 
+  static async updateEventById(eventToUpdate) {
+    const response = await axios.patch(`${BASE_URL}/event`, eventToUpdate);
+    return response.data;
+  }
+
   // ============================= Product method =============================
   static async fetchAllProducts() {
     const response = await axios.get(`${BASE_URL}/products`);
