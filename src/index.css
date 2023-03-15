@@ -30,3 +30,12 @@ input[type="number"] {
 /* .container {
     @apply flex flex-col max-w-
 } */
+
+.showProgressElement {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+.hideProgressElement {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}

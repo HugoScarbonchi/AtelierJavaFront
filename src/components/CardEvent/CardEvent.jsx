@@ -1,8 +1,9 @@
 import img from "../../assets/bg_card.jpg";
 import { Buttton } from "../Button/Button";
 import {useState} from "react";
+import {FeteDeLaMusique} from "../../api/feteDeLaMusique";
 
-export function CardEvent({ max_tickets, name, place, price }) {
+export function CardEvent({ event, max_tickets, name, place, price }) {
 
   const [quantityValue, setQuantityValue] = useState(1);
 
@@ -30,7 +31,7 @@ export function CardEvent({ max_tickets, name, place, price }) {
         </span>
 
         <div className="flex justify-between items-start flex-wrap-reverse gap-3">
-          <Buttton>Acheter mon billet</Buttton>
+          <Buttton onClick={() => FeteDeLaMusique.addTicketToCart(event, 1, quantityValue)}>Acheter mon billet</Buttton>
           <div className="flex flex-col gap-1 items-center">
             <label className="text-primary">Quantité</label>
             <div className="flex">

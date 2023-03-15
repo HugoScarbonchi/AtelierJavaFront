@@ -7,6 +7,7 @@ export function Header({
   subTitleMessage,
   promoMessage,
   showHeader,
+    buttonRoute
 }) {
   return (
     <>
@@ -17,6 +18,7 @@ export function Header({
                 titleMessage={titleMessage}
                 subTitleMessage={subTitleMessage}
                 promoMessage={promoMessage}
+                buttonRoute={buttonRoute}
             />
         }
 
