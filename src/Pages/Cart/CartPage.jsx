@@ -3,7 +3,7 @@ import { FeteDeLaMusique } from "../../api/feteDeLaMusique";
 import MainTitle from "../../components/MainTitle/MainTitle";
 import { Header } from "../../containers/Header/Header";
 import { Buttton } from "../../components/Button/Button";
-import Spline from '@splinetool/react-spline';
+import Spline from "@splinetool/react-spline";
 
 export default function CartPage() {
   const [cartDetailsList, setCartDetailsList] = useState(false);
@@ -87,11 +87,9 @@ export default function CartPage() {
       <div className="flex flex-row w-screen">
         <div id="partLeft" className="w-1/2 min-h-[600px]">
           <div className="px-20">
-            
-            {cartDetailsList && 
-            (
-            <div>
-              <p className="font-bold text-4xl text-primary mt-10">Panier</p>
+            {cartDetailsList &&
+              (<div>
+                <p className="font-bold text-4xl text-primary mt-10">Panier</p>
 
               <table className="mt-10">
                 <thead>
@@ -168,15 +166,10 @@ export default function CartPage() {
           </div>
         </div>
 
-
-
-
-
         <div id="partRight" className="w-1/2">
           <Spline scene="https://prod.spline.design/HsxbSZb-AGch9Jgk/scene.splinecode" />
         </div>
       </div>
-      
     </>
   );
 }
