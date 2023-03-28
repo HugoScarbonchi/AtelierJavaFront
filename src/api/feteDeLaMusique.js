@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BASE_URL } from "../config";
+import {BASE_URL} from "../config";
 import {showAddCart} from "../App";
 
 export class FeteDeLaMusique {
@@ -95,6 +95,18 @@ export class FeteDeLaMusique {
       console.error(error);
       return false
     }
+
+  }
+
+  static async removeProductToCart(productId) {
+    return await axios.delete(`${BASE_URL}/removeProductToCart?productId=${productId}`
+    );
+
+  }
+
+  static async removeTicketToCart(ticketId) {
+    return await axios.delete(`${BASE_URL}/removeTicketToCart?ticketId=${ticketId}`
+    );
 
   }
 
