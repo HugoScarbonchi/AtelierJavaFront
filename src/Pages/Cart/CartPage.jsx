@@ -4,6 +4,8 @@ import MainTitle from "../../components/MainTitle/MainTitle";
 import { Header } from "../../containers/Header/Header";
 import { Buttton } from "../../components/Button/Button";
 import Spline from "@splinetool/react-spline";
+import CartProductLine from "../../components/CartLines/CartProductLine";
+import CartEventLine from "../../components/CartLines/CartEventLine";
 
 export default function CartPage() {
   const [cartDetailsList, setCartDetailsList] = useState(false);
@@ -21,7 +23,7 @@ export default function CartPage() {
 
   useEffect(() => {
     fetchCartDetails();
-  }, []);
+  }, [cartDetailsList]);
 
   const handleChange = (event) => {
       setCodeDiscountValue(event.target.value)
@@ -87,16 +89,16 @@ export default function CartPage() {
       <div className="flex flex-row w-screen">
         <div id="partLeft" className="w-1/2 min-h-[600px]">
           <div className="px-20">
-            {cartDetailsList &&
+            {cartDetailsList && cartDetailsList.length > 0 &&
               (<div>
                 <p className="font-bold text-4xl text-primary mt-10">Panier</p>
 
               <table className="mt-10">
                 <thead>
-                  <tr className="border-solid border-b-2 text-primary">
-                    <th className="uppercase text-lg text-start">Article</th>
-                    <th className="uppercase text-lg text-center">Quantité</th>
-                    <th className="uppercase text-lg text-end">Prix</th>
+                  <tr className="text-primary">
+                    <th className="border-solid border-b-2 uppercase text-lg text-start">Article</th>
+                    <th className="border-solid border-b-2 uppercase text-lg text-center">Quantité</th>
+                    <th className="border-solid border-b-2 uppercase text-lg text-end">Prix</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -105,32 +107,16 @@ export default function CartPage() {
                       if (detail.product !== null) {
                           totalCart += (detail.product.price * detail.quantity) / 100
                           return(
-                              <tr key={i} className="border-solid border-b-2 text-primary">
-                                  <td className="pr-12 py-3 text-start">
-                                      {detail.product.name}
-                                  </td>
-                                  <td className="px-6 py-3 text-center">{detail.quantity}</td>
-                                  <td className="pl-12 py-3 text-end">
-                                      {(detail.product.price * detail.quantity) / 100}€ ttc
-                                  </td>
-                              </tr>
+                              <CartProductLine key={i} detail={detail} />
                           )
                       } else {
                           totalCart += (detail.ticket.event.price * detail.quantity) / 100
                           return(
-                              <tr key={i} className="border-solid border-b-2 text-primary">
-                                  <td className="pr-12 py-3 text-start">
-                                      🎟&nbsp;&nbsp;&nbsp;{detail.ticket._ref} - {detail.ticket.event.name}
-                                  </td>
-                                  <td className="px-6 py-3 text-center">{detail.quantity}</td>
-                                  <td className="pl-12 py-3 text-end">
-                                      {(detail.ticket.event.price * detail.quantity) / 100}€ ttc
-                                  </td>
-                              </tr>
+                              <CartEventLine key={i}  detail={detail} />
                           )
                       }
                     })}
-                    <tr className="border-solid border-b-2 text-primary">
+                    <tr className="text-primary">
                         <td className="uppercase text-xl py-3 text-start font-bold">Total
                         </td>
                         <td></td>
@@ -140,7 +126,7 @@ export default function CartPage() {
               </table>
                 
                 <div className="mt-5 flex flex-row">
-                    <input className="border-2 border-[#5D5A88] border-solid rounded-lg py-3.5 px-3.5" placeholder="Votre code promo" defaultValue="" value={codeDiscountValue} onChange={(event) => handleChange(event)} type="text"/>
+                    <input className="border-2 border-[#5D5A88] border-solid rounded-lg py-3.5 px-3.5" placeholder="Votre code promo" value={codeDiscountValue} onChange={(event) => handleChange(event)} type="text"/>
                     <button className="bg-[#5D5A88] border-2 border-[#5D5A88] border-solid rounded-lg py-3.5 px-3.5 text-white mx-4 hover:scale-[1.07] transition" onClick={applyDiscount}>Appliquer le code</button>
                 </div>
                 {badCodeDiscountValue && (
