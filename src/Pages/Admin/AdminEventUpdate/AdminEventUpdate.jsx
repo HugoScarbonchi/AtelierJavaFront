@@ -1,8 +1,9 @@
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 
 import { Section } from "../../../components/Section/Section"
 import { useEffect, useState } from "react";
 import { FeteDeLaMusique } from "../../../api/feteDeLaMusique";
+import { ButtonAdmin } from "../../../components/ButtonAdmin/ButtonAdmin";
 
 export function AdminEventUpdate() {
 
@@ -18,6 +19,8 @@ export function AdminEventUpdate() {
     const [sellAt, setSellAt] = useState();
 
     const [returnMessage, setReturnMessage] = useState();
+
+    const navigation = useNavigate();
 
     async function fetchEvent() {
         let event = await FeteDeLaMusique.fetchEventById(id);
@@ -56,7 +59,14 @@ export function AdminEventUpdate() {
         }
     }
 
-    return event ? <Section className="flex-col">
+    return event ? <Section className="flex-col items-start">
+        <ButtonAdmin
+            handle={function() {
+                navigation("/admin/events")
+            }}
+        >
+            Retour
+        </ButtonAdmin>
         {returnMessage && returnMessage}
         <form className="w-full">
             <div className="mb-6">

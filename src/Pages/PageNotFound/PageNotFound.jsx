@@ -8,8 +8,9 @@ export function PageNotFound() {
           promoMessage="Retourner à la page d'accueil"
           buttonRoute="/"
           showHeader={true}
+          showPromotionCode={false}
+          showNavigationBar={false}
         />
-      <div>404</div>
     </>
     
   ) 

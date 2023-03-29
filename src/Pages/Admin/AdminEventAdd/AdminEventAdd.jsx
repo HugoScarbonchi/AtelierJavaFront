@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FeteDeLaMusique } from "../../../api/feteDeLaMusique";
 import { Section } from "../../../components/Section/Section";
+import { ButtonAdmin } from "../../../components/ButtonAdmin/ButtonAdmin";
+import { useNavigate } from "react-router-dom";
 
 export function AdminEventAdd() {
 
@@ -13,6 +15,8 @@ export function AdminEventAdd() {
     const [sellAt, setSellAt] = useState();
 
     const [returnMessage, setReturnMessage] = useState();
+
+    const navigation = useNavigate();
 
     async function handleAdd(e) {
         e.preventDefault();
@@ -32,7 +36,14 @@ export function AdminEventAdd() {
         }
     }
 
-    return <Section className="flex-col">
+    return <Section className="flex-col items-start">
+        <ButtonAdmin
+            handle={function() {
+                navigation("/admin/events")
+            }}
+        >
+            Retour
+        </ButtonAdmin>
         {returnMessage && returnMessage}
         <form className="w-full">
             <div className="mb-6">

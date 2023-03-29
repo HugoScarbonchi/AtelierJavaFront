@@ -21,6 +21,10 @@ module.exports = {
             ...theme('colors'),
             'primary': '#5D5A88'
         }),
+        boxShadowColor: theme => ({
+            ...theme('colors'),
+            'primary': '#5D5A88'
+        }),
         extend: {},
     },
     plugins: [],

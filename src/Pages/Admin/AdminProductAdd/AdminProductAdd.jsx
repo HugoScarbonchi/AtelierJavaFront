@@ -1,12 +1,16 @@
 import { useState } from "react";
 import { FeteDeLaMusique } from "../../../api/feteDeLaMusique";
 import { Section } from "../../../components/Section/Section";
+import { ButtonAdmin } from "../../../components/ButtonAdmin/ButtonAdmin";
+import { useNavigate } from "react-router-dom";
 
 export function AdminProductAdd() {
 
     const [name, setName] = useState();
     const [price, setPrice] = useState();
     const [returnMessage, setReturnMessage] = useState();
+
+    const navigation = useNavigate();
 
     async function handleAdd(e) {
         e.preventDefault();
@@ -18,7 +22,14 @@ export function AdminProductAdd() {
         }
     }
 
-    return <Section className="flex-col">
+    return <Section className="flex-col items-start">
+        <ButtonAdmin
+            handle={function() {
+                navigation("/admin/products")
+            }}
+        >
+            Retour
+        </ButtonAdmin>
         {returnMessage && returnMessage}
         <form className="w-full">
             <div className="mb-6">

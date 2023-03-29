@@ -16,6 +16,7 @@ import { AdminProductAdd } from "./Pages/Admin/AdminProductAdd/AdminProductAdd";
 import { AdminEventsList } from "./Pages/Admin/AdminEventsList/AdminEventsList";
 import { AdminEventUpdate } from "./Pages/Admin/AdminEventUpdate/AdminEventUpdate";
 import { AdminEventAdd } from "./Pages/Admin/AdminEventAdd/AdminEventAdd";
+import { Admin } from "./Pages/Admin/Admin/Admin";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -24,7 +25,7 @@ root.render(
         <BrowserRouter>
             <Routes>
                 <Route path="/admin" element={<AppAdmin />}>
-                    <Route path="" element={<PageNotFound />}></Route>
+                    <Route path="" element={<Admin />}></Route>
                     <Route path="products" element={<AdminProductsList />}></Route>
                     <Route path="product/update/:id" element={<AdminProductUpdate />}></Route>
                     <Route path="product/add" element={<AdminProductAdd />}></Route>
