@@ -62,13 +62,6 @@ export function AdminProductsList() {
         >
             Retour
         </ButtonAdmin>
-        <ButtonAdmin
-            handle={function() {
-                navigate("/admin/product/add")
-            }}
-        >
-            <b>Ajouter un produit</b>
-        </ButtonAdmin>
     </Section>
   
     <Section className="mx-10 rounded-lg overflow-x-auto border border-gray-200">
@@ -112,16 +105,14 @@ export function AdminProductsList() {
               </tr>
             ))}
           <tr className="bg-white even:bg-gray-50">
-            <td>
-              <div
-                onClick={() => navigate("/admin/product/add")}
-                className="font-bold border w-40 h-12 flex m-5 items-center justify-center bg-green-100 rounded text-green-800 cursor-pointer hover:underline"
+            <td colSpan={3}>
+              <ButtonAdmin
+                handle={() => navigate("/admin/product/add")}
+                className="font-bold m-5 text-green-800 border-green-800 text-center !w-52 mx-auto"
               >
                 Ajouter un produit
-              </div>
+              </ButtonAdmin>
             </td>
-            <td></td>
-            <td></td>
           </tr>
         </tbody>
       </table>

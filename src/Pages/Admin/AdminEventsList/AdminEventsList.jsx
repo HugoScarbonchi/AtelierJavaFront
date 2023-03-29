@@ -62,13 +62,6 @@ export function AdminEventsList() {
         >
             Retour
         </ButtonAdmin>
-        <ButtonAdmin
-            handle={function() {
-                navigate("/admin/event/add")
-            }}
-        >
-            <b>Ajouter un événement</b>
-        </ButtonAdmin>
     </Section>
     <Section className="mx-10 rounded-lg overflow-x-auto border border-gray-200">
       <table className="table-auto w-full text-sm text-left text-gray-500">
@@ -129,16 +122,14 @@ export function AdminEventsList() {
               </tr>
             ))}
           <tr className="bg-white even:bg-gray-50">
-            <td>
-              <div
-                onClick={() => navigate("/admin/event/add")}
-                className="font-bold border w-40 h-12 flex m-5 items-center justify-center bg-green-100 rounded text-green-800 cursor-pointer hover:underline"
+            <td colSpan={7}>
+              <ButtonAdmin
+                handle={() => navigate("/admin/event/add")}
+                className="font-bold m-5 text-green-800 border-green-800 text-center !w-52 mx-auto"
               >
                 Ajouter un evenement
-              </div>
+              </ButtonAdmin>
             </td>
-            <td></td>
-            <td></td>
           </tr>
         </tbody>
       </table>
