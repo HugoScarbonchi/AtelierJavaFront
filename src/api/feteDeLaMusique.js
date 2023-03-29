@@ -1,6 +1,6 @@
 import axios from "axios";
-import {BASE_URL} from "../config";
-import {showAddCart} from "../App";
+import { BASE_URL } from "../config";
+import { showAddCart } from "../App";
 
 export class FeteDeLaMusique {
   // ============================= Events methodes =============================
@@ -20,10 +20,7 @@ export class FeteDeLaMusique {
   }
 
   static async deleteEventById(eventIdToDelete) {
-    const response = await axios.delete(
-      `${BASE_URL}/event?id=${eventIdToDelete}`
-    );
-    return response.data;
+    await axios.delete(`${BASE_URL}/event?id=${eventIdToDelete}`);
   }
 
   static async updateEventById(eventToUpdate) {
@@ -52,10 +49,7 @@ export class FeteDeLaMusique {
   }
 
   static async deleteProductById(productIdToDelete) {
-    const response = await axios.delete(
-      `${BASE_URL}/product?id=${productIdToDelete}`
-    );
-    return response.data;
+    await axios.delete(`${BASE_URL}/product?id=${productIdToDelete}`);
   }
 
   // ============================= Cart methodes =============================
@@ -72,52 +66,50 @@ export class FeteDeLaMusique {
 
   static async addProductToCart(product, userId, quantity) {
     try {
-      const response = await axios.post(`${BASE_URL}/addProductToCart?userId=${userId}&quantity=${quantity}`,
-          product
+      const response = await axios.post(
+        `${BASE_URL}/addProductToCart?userId=${userId}&quantity=${quantity}`,
+        product
       );
-      showAddCart()
+      showAddCart();
       return true;
     } catch (error) {
       console.error(error);
-      return false
+      return false;
     }
-
   }
 
   static async addTicketToCart(ticket, userId, quantity) {
     try {
-      const response = await axios.post(`${BASE_URL}/addTicketToCart?userId=${userId}&quantity=${quantity}`,
-          ticket
+      const response = await axios.post(
+        `${BASE_URL}/addTicketToCart?userId=${userId}&quantity=${quantity}`,
+        ticket
       );
-      showAddCart()
+      showAddCart();
       return true;
     } catch (error) {
       console.error(error);
-      return false
+      return false;
     }
-
   }
 
   static async removeProductToCart(productId) {
-    return await axios.delete(`${BASE_URL}/removeProductToCart?productId=${productId}`
+    return await axios.delete(
+      `${BASE_URL}/removeProductToCart?productId=${productId}`
     );
-
   }
 
   static async removeTicketToCart(ticketId) {
-    return await axios.delete(`${BASE_URL}/removeTicketToCart?ticketId=${ticketId}`
+    return await axios.delete(
+      `${BASE_URL}/removeTicketToCart?ticketId=${ticketId}`
     );
-
   }
 
   static async getDIscounts() {
     try {
-      const response = await axios.get(`${BASE_URL}/discounts`
-      );
+      const response = await axios.get(`${BASE_URL}/discounts`);
       return response.data;
     } catch (error) {
       console.error(error);
     }
-
   }
 }
