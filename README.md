@@ -40,15 +40,14 @@ Votre backend est enfin fonctionnel, vous pouvez le lancer.
 ## Setup frontend React
 
 Dans le dossier du projet vous pouvez lancer :
+- la commande `npm install` pour installer l'ensemble des dépendances
+- la commande `npm start` pour lancer le projet lorsque toutes les dépendances seront installées
 
-### `npm start`
-
-Fais tourner l'app en mode developpement.
 Ouvrir [http://localhost:3000](http://localhost:3000) pour le voir dans votre navigateur.
 
 La page se recharge toute seule s'il y a un changement. On peut également consulter les erreurs dans la console.
 
-Votre frontend est fonctionnel
+Votre frontend est fonctionnel!
 
 ## Authors
 
