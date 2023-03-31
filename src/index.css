@@ -27,9 +27,6 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
-/* .container {
-    @apply flex flex-col max-w-
-} */
 
 .showProgressElement {
     opacity: 1;

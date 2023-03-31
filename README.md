@@ -4,7 +4,7 @@ La fête de la musique approche à grands pas et c'est l'occasion rêvée de cé
 
 ## Règles de gestions achat
 
-L'utilisateur peut acheter des articles comme dans un e-commerce classique. Il peut cependant bénéficier de codes promos pour avoir des réductions sur le prix de son panier. Notament un code exeptionnel `SimonBedart` offrant -50% sur sa commande. L'utilisateur peut également choisir la quantité à ajouter dans son panier et voir la liste des articles choisi dans la page panier.
+L'utilisateur peut acheter des articles comme dans un e-commerce classique. Il peut cependant bénéficier de codes promos pour avoir des réductions sur le prix de son panier. Notament un code exeptionnel `SimonBedartPass` offrant -50% sur sa commande. L'utilisateur peut également choisir la quantité à ajouter dans son panier et voir la liste des articles choisi dans la page panier.
 
 # Installer votre environnement
 
@@ -36,10 +36,10 @@ Verifiez la bonne installation des dépendances du fichier pom.xml.
 
 Votre backend est enfin fonctionnel, vous pouvez le lancer.
 
-
 ## Setup frontend React
 
 Dans le dossier du projet vous pouvez lancer :
+
 - la commande `npm install` pour installer l'ensemble des dépendances
 - la commande `npm start` pour lancer le projet lorsque toutes les dépendances seront installées
 
@@ -49,10 +49,19 @@ La page se recharge toute seule s'il y a un changement. On peut également consu
 
 Votre frontend est fonctionnel!
 
+## Une erreur ?
+
+Il se peut que votre Backend soit lancé sur un autre port que celui prévu de base : le port 9000.
+Si tel est le cas, rendez vous dans le fichier **src/config.js** et modifier la variable **BASE_URL**.
+Voici un exemple :
+
+```javascript
+const BASE_URL = "http://localhost:{NUMERO_PORT}";
+```
+
 ## Authors
 
 - Hugo Scarbonchi
 - Antonin Simon
 - Maxime Baudoin
 - Matis Galvin
-
