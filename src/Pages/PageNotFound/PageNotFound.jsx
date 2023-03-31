@@ -1,9 +1,17 @@
-
-
+import { Header } from "../../containers/Header/Header"
 export function PageNotFound() {
-
-    return <div>
-        404
-    </div>
-
+  return(
+    <>
+      <Header
+          titleMessage="Malheuresement, cette page est introuvable"
+          subTitleMessage="Veuillez vous rediriger vers l'accueil"
+          promoMessage="Retourner à la page d'accueil"
+          buttonRoute="/"
+          showHeader={true}
+          showPromotionCode={false}
+          showNavigationBar={false}
+        />
+    </>
+    
+  ) 
 }

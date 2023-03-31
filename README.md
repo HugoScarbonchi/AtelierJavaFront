@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Rappel du sujet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+La fête de la musique approche à grands pas et c'est l'occasion rêvée de célébrer la musique sous toutes ses formes ! Que vous soyez fan de rock, de pop, de jazz ou de musique électronique, cette journée est faite pour vous. Les rues seront animées par des artistes locaux et internationaux, des concerts gratuits seront organisés dans les parcs et les places publiques, et les bars et les clubs ouvriront leurs portes pour des soirées endiablées. C'est une journée où tout le monde peut se rassembler pour partager leur amour de la musique et découvrir de nouveaux talents. Alors, préparez-vous à danser, chanter et vibrer au rythme de la musique lors de la fête de la musique !
 
-## Available Scripts
+## Règles de gestions achat
 
-In the project directory, you can run:
+L'utilisateur peut acheter des articles comme dans un e-commerce classique. Il peut cependant bénéficier de codes promos pour avoir des réductions sur le prix de son panier. Notament un code exeptionnel `SimonBedart` offrant -50% sur sa commande. L'utilisateur peut également choisir la quantité à ajouter dans son panier et voir la liste des articles choisi dans la page panier.
+
+# Installer votre environnement
+
+## Recuperer les ressources
+
+- Recuperer le Back à cette adresse :
+  [https://github.com/MatisGalvin/atelier-java-back](https://github.com/MatisGalvin/atelier-java-back)
+
+- Recuperer le Front à cette adresse : [https://github.com/HugoScarbonchi/atelier-java-front](https://github.com/HugoScarbonchi/atelier-java-front)
+
+## Base de donnée
+
+Lancer votre serveur MySQL.
+Créer un db avec le nom de votre choix. Dans l'exemple nous l'appelons `java`
+
+## Setup backend Java
+
+Pour pouvoir lancer le projet sans probleme, vous devrez parametrer un certain nombre d'élements **dans les variables d'environnement**.
+Ce sont vos informations de connexion.
+
+- Le dbport, dbhost, dbusername, dbname et dbpassword.
+  Pour vous aider, voici un exemple
+
+```bash
+ dbport=8889;dbhost=localhost;dbusername=java;dbname=java;bpassword=root
+```
+
+Verifiez la bonne installation des dépendances du fichier pom.xml.
+
+Votre backend est enfin fonctionnel, vous pouvez le lancer.
+
+
+## Setup frontend React
+
+Dans le dossier du projet vous pouvez lancer :
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Fais tourner l'app en mode developpement.
+Ouvrir [http://localhost:3000](http://localhost:3000) pour le voir dans votre navigateur.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+La page se recharge toute seule s'il y a un changement. On peut également consulter les erreurs dans la console.
 
-### `npm test`
+Votre frontend est fonctionnel
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Authors
 
-### `npm run build`
+- Hugo Scarbonchi
+- Antonin Simon
+- Maxime Baudoin
+- Matis Galvin
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

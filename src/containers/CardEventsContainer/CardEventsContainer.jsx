@@ -23,6 +23,7 @@ export function CardEventsContainer({ max = false }) {
         eventList.map((event, i) => (
           <CardEvent
             key={event.name + i}
+            event={event}
             max_tickets={event.max_tickets}
             name={event.name}
             place={event.place}
